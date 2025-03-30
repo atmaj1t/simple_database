@@ -7,8 +7,8 @@ const togglePassword = document.querySelector('.toggle-password');
 const passwordStrength = document.getElementById('password-strength');
 const spinner = document.querySelector('.spinner');
 
-// API URL
-const API_URL = 'http://localhost:5000/api/auth';
+// API URL - Update this with your deployed server URL
+const API_URL = 'https://simpledatabasemongodb.netlify.app/api/auth';  // Updated with your Netlify URL
 
 // Toggle password visibility
 togglePassword.addEventListener('click', () => {

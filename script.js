@@ -5,11 +5,10 @@ const passwordInput = document.getElementById('password');
 const togglePassword = document.querySelector('.toggle-password');
 const passwordStrength = document.getElementById('password-strength');
 const rememberMe = document.getElementById('remember-me');
-const socialButtons = document.querySelectorAll('.btn-social');
 const spinner = document.querySelector('.spinner');
 
-// API URL
-const API_URL = 'http://localhost:5000/api/auth';
+// API URL - Update this with your deployed server URL
+const API_URL = 'https://simpledatabasemongodb.netlify.app/api/auth';  // Updated with your Netlify URL
 
 // Check for saved credentials
 document.addEventListener('DOMContentLoaded', () => {
@@ -103,7 +102,7 @@ loginForm.addEventListener('submit', async function(event) {
     
     // Redirect after successful login
     setTimeout(() => {
-      window.location.href = 'dashboard.html'; // Create this page for the dashboard
+      window.location.href = 'dashboard.html';
     }, 1500);
   } catch (error) {
     errorMessage.style.visibility = 'visible';
@@ -116,14 +115,6 @@ loginForm.addEventListener('submit', async function(event) {
   }
 });
 
-// Handle social login buttons
-socialButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const platform = button.classList.contains('btn-google') ? 'Google' : 'Facebook';
-    alert(`${platform} login functionality would be implemented here`);
-  });
-});
-
 // Handle forgot password link
 document.querySelector('.forgot-password').addEventListener('click', (e) => {
   e.preventDefault();
@@ -133,5 +124,5 @@ document.querySelector('.forgot-password').addEventListener('click', (e) => {
 // Handle sign up link
 document.getElementById('signup-link').addEventListener('click', (e) => {
   e.preventDefault();
-  window.location.href = 'register.html'; // Create this page for registration
+  window.location.href = 'register.html';
 });

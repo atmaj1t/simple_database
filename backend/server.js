@@ -9,8 +9,16 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration
+const corsOptions = {
+    origin: ['https://simpledatabasemongodb.netlify.app', 'http://localhost:5500'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
