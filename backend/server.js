@@ -11,7 +11,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: ['https://simpledatabasemongodb.netlify.app', 'http://localhost:5500'],
+    origin: ['https://atmaj1t.github.io', 'http://localhost:5500'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
